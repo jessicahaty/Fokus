@@ -12,10 +12,10 @@ const iniciarOuPausarBt = document.querySelector('#start-pause span')
 const imagemBt = document.querySelector('.app__card-primary-butto-icon')
 const tempoNaTela = document.querySelector('#timer')
 
-const musica = new Audio ('/sons/musica.mp3')
-const SomPause = new Audio ('/sons/pause.mp3')
-const SomPlay = new Audio ('/sons/play.wav')
-const SomZerar = new Audio ('/sons/beep.mp3')
+const musica = new Audio ('./sons/musica.mp3')
+const SomPause = new Audio ('./sons/pause.mp3')
+const SomPlay = new Audio ('./sons/play.wav')
+const SomZerar = new Audio ('./sons/beep.mp3')
 
 let tempoDecorridoEmSegundos = 1500
 let intervaloId = null 
@@ -102,13 +102,13 @@ function iniciarOuPausar() {
     }
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = "Pausar"
-    imagemBt.setAttribute('src', '/imagens/pause.png')
+    imagemBt.setAttribute('src', './imagens/pause.png')
 }
 
 function zerar() {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = "Começar"
-    imagemBt.setAttribute('src', '/imagens/play_arrow.png')
+    imagemBt.setAttribute('src', './imagens/play_arrow.png')
     intervaloId = null
 }
 
